@@ -1,0 +1,29 @@
+/* Display with 1100px */
+@media (max-width: 69em) {
+  html {
+    /* 9px */
+    font-size: 56.25%;
+  }
+}
+
+/* Display with 950px */
+@media (max-width: 59em) {
+  html {
+    /* 8px */
+    font-size: 50%;
+  }
+}
+
+/* Display with 850px */
+@media (max-width: 53em) {
+  .pricing {
+    height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: start;
+  }
+
+  .main-text {
+    padding: 3.2rem 0 7.4rem 0;
+  }
+}

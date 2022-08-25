@@ -13,21 +13,25 @@
 
 html {
   font-size: 62.5%;
-  background-color: var(--page-background);
+  background: linear-gradient(
+    to bottom,
+    var(--blue) 0%,
+    var(--blue) 42rem,
+    var(--page-background) 42rem,
+    var(--page-background) 100%
+  );
+  overflow: hidden;
+  height: 100vh;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
+  overflow: hidden;
 }
 
 /********************************/
 /* SECTION TITLE */
 /********************************/
-
-.section-text {
-  background-color: var(--blue);
-}
-
 .main-text {
   display: flex;
   flex-direction: column;
@@ -35,8 +39,7 @@ body {
   align-items: center;
   text-align: center;
   gap: 2rem;
-  max-width: 56rem;
-  padding: 4.8rem 0 14.4rem 0;
+  padding: 4.8rem 0 9.6rem 0;
 }
 
 .title {
@@ -58,8 +61,12 @@ body {
 .pricing {
   display: flex;
   gap: 2rem;
-  justify-items: center;
+  padding: 2.2rem;
   justify-content: center;
+}
+
+.pricing::-webkit-scrollbar {
+  display: none;
 }
 
 .card {
@@ -68,17 +75,16 @@ body {
   background-color: #fff;
   max-width: 32rem;
   max-height: 45.7rem;
-  transform: translateY(-10rem);
-  border-radius: 10px;
-
+  border-radius: 1rem;
   box-shadow: 0.6rem 1.2rem 2.4rem rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 }
 
 .main-information {
   padding: 0 2.4rem 2.4rem 2.4rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  height: 100%;
 }
 
 .popular {
@@ -86,8 +92,8 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #ffcc29;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .tag {
@@ -95,7 +101,7 @@ body {
   padding: 0.8rem 2.4rem;
   background-color: var(--blue);
   margin-right: 2.4rem;
-  border-radius: 100px;
+  border-radius: 100rem;
   font-size: 1.2rem;
   color: #fff;
 }
@@ -139,6 +145,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
+  margin-bottom: 4.4rem;
 }
 
 .feature {
@@ -150,21 +157,24 @@ body {
   font-weight: 600;
 }
 
+svg {
+  height: 1.8rem;
+}
+
 .cta {
   background-color: #fff;
   color: var(--blue);
   border: 1px solid var(--blue);
   padding: 1.2rem;
   width: 100%;
-  border-radius: 10px;
-  margin-top: 4.4rem;
+  border-radius: 1rem;
+  margin-top: auto;
   transition: all 0.3s;
   font-size: 2rem;
   text-transform: uppercase;
 }
 
 .best-choice .cta {
-  margin-top: 3rem;
   background-color: var(--blue);
   color: #fff;
 }
